@@ -38,7 +38,7 @@
         <property name="nodeLocatorService" ref="nodeLocatorService" />
     </bean -->
 
-    <bean id="simple-action" class="com.action.SimpleRepoActionExecuter" parent="action-executer">
+    <bean id="simple-action" class="com.job.action.SimpleRepoActionExecuter" parent="action-executer">
         <property name="serviceRegistry">
             <ref bean="ServiceRegistry" />
         </property>

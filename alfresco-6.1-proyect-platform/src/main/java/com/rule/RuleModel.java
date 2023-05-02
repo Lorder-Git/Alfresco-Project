@@ -29,8 +29,7 @@ import org.alfresco.service.namespace.QName;
 
 /**
  * Interface containing rule model constants
- * 
- * @author Roy Wetherall
+ *
  */
 public interface RuleModel
 {

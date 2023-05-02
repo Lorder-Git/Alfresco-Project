@@ -1,4 +1,4 @@
-package com.action;
+package com.job.action;
 
 import org.alfresco.model.ContentModel;
 import org.alfresco.repo.action.ParameterDefinitionImpl;

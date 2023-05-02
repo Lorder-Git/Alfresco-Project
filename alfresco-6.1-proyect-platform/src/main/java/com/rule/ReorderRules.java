@@ -40,8 +40,7 @@ import org.alfresco.service.cmr.rule.RuleService;
 
 /**
  * Action implementation to reorder rules
- * 
- * @author Roy Wetherall
+ *
  */
 public class ReorderRules extends ActionExecuterAbstractBase
 {
@@ -76,19 +75,18 @@ public class ReorderRules extends ActionExecuterAbstractBase
     }
     
     /**
-     * @see ActionExecuterAbstractBase#executeImpl(Action, NodeRef)
+     * @see com.action.executer.ActionExecuterAbstractBase#executeImpl(Action, NodeRef)
      */
-    @SuppressWarnings("unchecked")
     @Override
     protected void executeImpl(Action action, NodeRef actionedUponNodeRef)
     {
-        if (nodeService.exists(actionedUponNodeRef) == true)
+        if (nodeService.exists(actionedUponNodeRef))
         {
             // Check that the actioned upon node has the rules aspect applied
-            if (nodeService.hasAspect(actionedUponNodeRef, RuleModel.ASPECT_RULES) == true)
-            {                 
-                List<NodeRef> rules = (List<NodeRef>)action.getParameterValue(PARAM_RULES);
-                
+            if (nodeService.hasAspect(actionedUponNodeRef, RuleModel.ASPECT_RULES))
+            {
+                List<NodeRef> rules = (List<NodeRef>) action.getParameterValue(PARAM_RULES);
+
                 int index = 0;
                 for (NodeRef rule : rules)
                 {
@@ -100,7 +98,7 @@ public class ReorderRules extends ActionExecuterAbstractBase
     }
 
     /**
-     * @see org.alfresco.repo.action.ParameterizedItemAbstractBase#addParameterDefinitions(List)
+     * @see com.action.ParameterizedItemAbstractBase#addParameterDefinitions(List)
      */
     @Override
     protected void addParameterDefinitions(List<ParameterDefinition> paramList)

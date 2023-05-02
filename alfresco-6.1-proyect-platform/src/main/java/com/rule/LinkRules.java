@@ -43,8 +43,7 @@ import org.alfresco.service.cmr.rule.RuleService;
 
 /**
  * Action implementation to link the rules from one folder to another
- * 
- * @author Roy Wetherall
+ *
  */
 public class LinkRules extends ActionExecuterAbstractBase
 {
@@ -127,7 +126,7 @@ public class LinkRules extends ActionExecuterAbstractBase
     }
 
     /**
-     * @see org.alfresco.repo.action.ParameterizedItemAbstractBase#addParameterDefinitions(List)
+     * @see com.action.ParameterizedItemAbstractBase#addParameterDefinitions(List)
      */
     @Override
     protected void addParameterDefinitions(List<ParameterDefinition> paramList)

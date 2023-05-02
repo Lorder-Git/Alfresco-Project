@@ -1,4 +1,4 @@
-package com.action;
+package com.job.action;
 
 import org.alfresco.service.ServiceRegistry;
 import org.slf4j.Logger;

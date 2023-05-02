@@ -1,6 +1,6 @@
 package com.job;
 
-import com.action.ScheduledJobExecuter;
+import com.job.action.ScheduledJobExecuter;
 import org.alfresco.error.AlfrescoRuntimeException;
 import org.alfresco.repo.security.authentication.AuthenticationUtil;
 import org.alfresco.schedule.AbstractScheduledLockedJob;

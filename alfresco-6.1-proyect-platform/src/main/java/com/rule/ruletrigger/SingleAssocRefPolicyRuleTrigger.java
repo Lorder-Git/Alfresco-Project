@@ -64,7 +64,7 @@ public class SingleAssocRefPolicyRuleTrigger extends RuleTriggerAbstractBase
     }
     
     /**
-     * @see org.alfresco.repo.rule.ruletrigger.RuleTrigger#registerRuleTrigger()
+     * @see com.rule.ruletrigger.RuleTrigger#registerRuleTrigger()
      */
     public void registerRuleTrigger()
     {

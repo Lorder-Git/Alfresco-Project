@@ -49,8 +49,6 @@ import org.apache.commons.logging.LogFactory;
 
 /**
  * Class containing behaviour for the rules aspect
- * 
- * @author Roy Wetherall
  */
 public class RulesAspect implements
                  CopyServicePolicies.OnCopyNodePolicy,
@@ -192,7 +190,6 @@ public class RulesAspect implements
     }
 
     /**
-     * <br>author Neil McErlean
      * @since 3.4.11
      */
     @Override
@@ -213,11 +210,10 @@ public class RulesAspect implements
     
     /**
      * Copy behaviour for the 'rules' model
-     * 
-     * @author Derek Hulley
+     *
      * @since 3.2
      */
-    private class RulesAspectCopyBehaviourCallback extends DefaultCopyBehaviourCallback
+    private static class RulesAspectCopyBehaviourCallback extends DefaultCopyBehaviourCallback
     {
         private final BehaviourFilter behaviourFilter;
         
