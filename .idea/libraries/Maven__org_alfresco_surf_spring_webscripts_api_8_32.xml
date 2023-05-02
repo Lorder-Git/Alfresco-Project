@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.alfresco.surf:spring-webscripts-api:8.32">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/alfresco/surf/spring-webscripts-api/8.32/spring-webscripts-api-8.32.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/alfresco/surf/spring-webscripts-api/8.32/spring-webscripts-api-8.32-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/alfresco/surf/spring-webscripts-api/8.32/spring-webscripts-api-8.32-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

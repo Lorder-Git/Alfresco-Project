@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.alfresco:share:classes:17.137">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/alfresco/share/17.137/share-17.137-classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/alfresco/share/17.137/share-17.137-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/alfresco/share/17.137/share-17.137-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

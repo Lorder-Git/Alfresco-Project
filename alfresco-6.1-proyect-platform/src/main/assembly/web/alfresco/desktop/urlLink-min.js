@@ -1,0 +1,1 @@
+function runAction(){out.println("URL link to "+deskParams.getFolder());var a=webURL+"navigate/browse/workspace/SpacesStore/"+deskParams.getFolderNode().getId()+"?ticket="+deskParams.getTicket();out.println("  url="+a);return a}var response="7,"+runAction();response;
