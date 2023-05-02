@@ -94,7 +94,6 @@ import org.alfresco.service.transaction.TransactionService;
  * The registry provides meta-data about each service and provides
  * access to the service interface.
  *
- * @author David Caruana
  */
 @AlfrescoPublicApi
 public interface ServiceRegistry

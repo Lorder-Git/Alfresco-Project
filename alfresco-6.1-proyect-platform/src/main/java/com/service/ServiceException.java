@@ -28,8 +28,7 @@ package com.service;
 
 /**
  * Base Exception of Service Exceptions.
- * 
- * @author David Caruana
+ *
  */
 public class ServiceException extends RuntimeException
 {
