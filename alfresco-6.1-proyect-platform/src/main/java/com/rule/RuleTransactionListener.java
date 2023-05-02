@@ -44,7 +44,7 @@ public class RuleTransactionListener extends TransactionListenerAdapter
 	/**
 	 * The rule service (runtime interface) 
 	 */
-	private org.alfresco.repo.rule.RuntimeRuleService ruleService;
+	private final org.alfresco.repo.rule.RuntimeRuleService ruleService;
 	
 	/**
 	 * Constructor

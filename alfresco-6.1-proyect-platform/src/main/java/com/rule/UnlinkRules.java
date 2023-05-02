@@ -39,8 +39,7 @@ import org.alfresco.service.cmr.rule.RuleService;
 
 /**
  * Action implementation to unlink the rules from one folder to another
- * 
- * @author Roy Wetherall
+ *
  */
 public class UnlinkRules extends ActionExecuterAbstractBase
 {
@@ -79,10 +78,10 @@ public class UnlinkRules extends ActionExecuterAbstractBase
     @Override
     protected void executeImpl(Action action, NodeRef actionedUponNodeRef)
     {
-        if (nodeService.exists(actionedUponNodeRef) == true)
+        if (nodeService.exists(actionedUponNodeRef))
         {
             // Check that the actioned upon node has the rules aspect applied
-            if (nodeService.hasAspect(actionedUponNodeRef, org.alfresco.repo.rule.RuleModel.ASPECT_RULES) == true)
+            if (nodeService.hasAspect(actionedUponNodeRef, RuleModel.ASPECT_RULES))
             {                 
                 // Get the rule node the actioned upon node is linked to
                 NodeRef linkedToNode = ((RuleService)ruleService).getLinkedToRuleNode(actionedUponNodeRef);

@@ -35,8 +35,7 @@ import org.alfresco.service.cmr.rule.RuleType;
 
 /**
  * Runtime rule service
- * 
- * @author Roy Wetherall
+ *
  */
 public interface RuntimeRuleService 
 {

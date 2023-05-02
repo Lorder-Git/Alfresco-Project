@@ -41,15 +41,14 @@ import org.springframework.extensions.surf.util.I18NUtil;
 
 /**
  * Rule type implementation class.
- * 
- * @author Roy Wetherall
+ *
  */
 public class RuleTypeImpl extends CommonResourceAbstractBase implements RuleType
 {
     /**
      * The logger
      */
-    private static Log logger = LogFactory.getLog(RuleTypeImpl.class); 
+    private static final Log logger = LogFactory.getLog(RuleTypeImpl.class);
     
     /**
      * The rule service
@@ -126,9 +125,9 @@ public class RuleTypeImpl extends CommonResourceAbstractBase implements RuleType
      */
     public void triggerRuleType(NodeRef nodeRef, NodeRef actionedUponNodeRef, boolean executeRuleImmediately)
     {
-        if (ruleService.isEnabled() == true &&
-            nodeService.exists(actionedUponNodeRef) == true && 
-            ruleService.isRuleTypeEnabled(this.getName()) == true)
+        if (ruleService.isEnabled() &&
+                nodeService.exists(actionedUponNodeRef) &&
+                ruleService.isRuleTypeEnabled(this.getName()))
         {
             List<Rule> rules = ruleService.getRules(
                     nodeRef, 
@@ -136,7 +135,7 @@ public class RuleTypeImpl extends CommonResourceAbstractBase implements RuleType
                     this.name);
             
             String ruleContext = null;
-            if (logger.isDebugEnabled() == true)
+            if (logger.isDebugEnabled())
             {
                 if (actionedUponNodeRef != null)
                 {
@@ -148,7 +147,7 @@ public class RuleTypeImpl extends CommonResourceAbstractBase implements RuleType
             {
                for (Rule rule : rules)
                {   
-                    if (logger.isDebugEnabled() == true)
+                    if (logger.isDebugEnabled())
                     {
                         if (nodeRef != null)
                         {
@@ -158,13 +157,13 @@ public class RuleTypeImpl extends CommonResourceAbstractBase implements RuleType
                     
                     // Only queue if the rule is not disabled
                     boolean exists = nodeService.exists(rule.getNodeRef());
-                    if (exists && rule.getRuleDisabled() == false && ruleService.rulesEnabled(ruleService.getOwningNodeRef(rule)))
+                    if (exists && !rule.getRuleDisabled() && ruleService.rulesEnabled(ruleService.getOwningNodeRef(rule)))
                     {
-                        if (logger.isDebugEnabled() == true)
+                        if (logger.isDebugEnabled())
                         {
                             logger.debug("Triggering rule" + ruleContext);
                         }
-                        if (executeRuleImmediately == false)
+                        if (!executeRuleImmediately)
                         {
                             // Queue the rule to be executed at the end of the transaction (but still in the transaction)
                             ((RuntimeRuleService)ruleService).addRulePendingExecution(nodeRef, actionedUponNodeRef, rule);
@@ -175,7 +174,7 @@ public class RuleTypeImpl extends CommonResourceAbstractBase implements RuleType
                             ((RuntimeRuleService)ruleService).executeRule(rule, actionedUponNodeRef, null);
                         }
                     }
-                    else if (logger.isDebugEnabled() == true)
+                    else if (logger.isDebugEnabled())
                     {
                         String message = null;
                         if (exists)
@@ -192,7 +191,7 @@ public class RuleTypeImpl extends CommonResourceAbstractBase implements RuleType
             }
             else
             {
-                if (logger.isDebugEnabled() == true)
+                if (logger.isDebugEnabled())
                 {
                     logger.debug("No rules to trigger" + ruleContext);
                 }
